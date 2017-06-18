@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: darro
- * Date: 07-06-2017
- * Time: 23:45
- */
+
 require_once('../../nusoap/lib/nusoap.php');
-//require_once('soporte_obrea.php');
+require_once('../../lib/soporte_obrea.php');
 $miURL = 'urn:mi_ws1';
 $server = new soap_server();
 $server->configureWSDL('ws_mountain', $miURL);

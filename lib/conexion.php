@@ -16,7 +16,7 @@ function connectDB_Admin(){
     $pass = "";
     $bd = "MOUNTAIN_ADMIN";
 
-    $conexion = mysqli_connect($server, $user, $pass,$bd)
+    $conexion = mysqli_connect($server, $user, $pass, $bd)
     or die("Ha sucedido un error inexperado en la conexion de la base de datos");
 
     return $conexion;
@@ -27,7 +27,7 @@ function connectDB_Cliente($bd){
     $user = "root";
     $pass = "";
 
-    $conexion = mysqli_connect($server, $user, $pass,$bd)
+    $conexion = mysqli_connect($server, $user, $pass, $bd)
     or die("Ha sucedido un error inexperado en la conexion de la base de datos");
 
     return $conexion;
