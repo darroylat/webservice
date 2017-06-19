@@ -49,14 +49,31 @@ function creaInscripcion($inscripcion){
 
     $conexionCliente = connectDB_Cliente($cliente['DATOSCLIENTE']);
     $queryInscripcion = putInscripcionPack($inscripcion);
-    ejecutar_sql($conexionCliente, $queryInscripcion);
+
+    $selectInscripcion = getInscripcionEvento($inscripcion);
+    $resultadoInscripcion = ejecutar_sql($conexionCliente, $selectInscripcion);
+
+    $filas = mysqli_num_rows($resultadoInscripcion);
 
     $respuesta[] = null;
 
-    if($conexionCliente->affected_rows > 0){
-        $respuesta = array('codigo' => '0000', 'descripcion' => 'Inscripcion evento realizada correctamente..');
+    if($filas == 0){
+        ejecutar_sql($conexionCliente, $queryInscripcion);
+
+        if($conexionCliente->affected_rows > 0){
+            $respuesta = array('codigo' => '0000', 'descripcion' => 'Inscripcion pack realizada correctamente.');
+        }else{
+            $respuesta = array('codigo' => '0001', 'descripcion' => 'Error en la inscripcion del pack.');
+        }
     }else{
-        $respuesta = array('codigo' => '0001', 'descripcion' => 'Error en la inscripcion del evento.');
+        $ins = $resultadoInscripcion->fetch_array();
+        $queryUpdate = updateInscripcionPack($ins['IDINSCRIPCION'], 1);
+        ejecutar_sql($conexionCliente, $queryUpdate);
+        if($conexionCliente->affected_rows > 0){
+            $respuesta = array('codigo' => '0000', 'descripcion' => 'Inscripcion pack realizada correctamente.');
+        }else{
+            $respuesta = array('codigo' => '0001', 'descripcion' => 'Error en la inscripcion del pack.');
+        }
     }
     return $respuesta;
 }

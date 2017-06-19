@@ -57,7 +57,9 @@ function eliminarInscripcion($inscripcion){
     if($filas == 0){
         $respuesta = array('codigo' => '0002', 'descripcion' => 'No se encontro incripcion al evento.');
     }else{
-        delInscripcionEvento($inscripcion);
+        $ins = $resultadoInscripcion->fetch_array();
+        $queryUpdate = updateInscripcionPack($ins['IDINSCRIPCION'], 0);
+        ejecutar_sql($conexionCliente, $queryUpdate);
         if($conexionCliente->affected_rows > 0){
             $respuesta = array('codigo' => '0000', 'descripcion' => 'Inscripcion al evento eliminada.');
         }else{

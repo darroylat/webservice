@@ -4,7 +4,7 @@ function ejecutar_sql($conex, $sql){
 
     $resultado = mysqli_query($conex, $sql);
 
-    if (! $resultado ) {die("ERROR AL EJECUTAR LA CONSULTA: ".mysqli_connect_error());}
+    if (! $resultado ) {die("ERROR AL EJECUTAR LA CONSULTA: ".mysqli_connect_error()." ".mysqli_error($conex));}
 
     return $resultado;
 }

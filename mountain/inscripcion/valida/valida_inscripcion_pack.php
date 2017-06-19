@@ -57,7 +57,12 @@ function validaInscripcion($inscripcion){
     if($filas == 0){
         $respuesta = array('codigo' => '0001', 'descripcion' => 'No se encontro incripcion al pack.');
     }else{
-        $respuesta = array('codigo' => '0000', 'descripcion' => 'Inscripcion al pack correcta.');
+        $ins = $resultadoInscripcion->fetch_array();
+        if ($ins['ACTIVO'] == 1){
+            $respuesta = array('codigo' => '0000', 'descripcion' => 'Inscripcion al pack correcta.');
+        }else{
+            $respuesta = array('codigo' => '0002', 'descripcion' => 'Inscripcion al pack inactiva.');
+        }
     }
 
     return $respuesta;

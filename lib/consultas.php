@@ -14,9 +14,16 @@ function getEventoIndividual($id){
     $query = "SELECT E.NOMBRE, S.NOMBRE AS NOMBRESENDERO, E.DESCRIPCION, 
               E.FECHA, E.HORA, E.VALOR, E.PUNTO, E.FOTO 
               FROM EVENTO E 
-              JOIN SENDERO S ON 
-              E.IDSENDERO = S.IDSENDERO 
+              JOIN SENDERO S ON E.IDSENDERO = S.IDSENDERO 
               WHERE E.IDEVENTO = '".$id."'";
+    return $query;
+}
+
+function getTodosEvento(){
+    $query = "SELECT E.IDEVENTO, E.NOMBRE, S.NOMBRE AS NOMBRESENDERO, U.NOMBRE AS NOMBREUBICACION,
+                E.DESCRIPCION, E.FECHA, E.HORA,  E.VALOR, E.PUNTO, E.FOTO, E.ESTADO FROM EVENTO E
+                JOIN SENDERO S ON E.IDSENDERO = S.IDSENDERO
+                JOIN UBICACION U ON U.IDUBICACION = S.IDUBICACION";
     return $query;
 }
 
@@ -32,13 +39,13 @@ function putUsuario($usuario){
 
 function putInscripcionEvento($inscripcion){
     $query = "INSERT INTO INSCRIPCIONEVENTO (IDEVENTO, IDUSUARIO, ACTIVO, PAGADO)
-              VALUES ('".$inscripcion['idevento']."', '".$inscripcion['idusuario']."', 0, 0)";
+              VALUES ('".$inscripcion['idevento']."', '".$inscripcion['idusuario']."', 1, 0)";
     return $query;
 }
 
 function putInscripcionPack($inscripcion){
     $query = "INSERT INTO INSCRIPCIONPACK (IDPACK, IDUSUARIO, ACTIVO, PAGADO)
-              VALUES ('".$inscripcion['idpack']."', '".$inscripcion['idusuario']."', 0, 0)";
+              VALUES ('".$inscripcion['idpack']."', '".$inscripcion['idusuario']."', 1, 0)";
     return $query;
 }
 
@@ -61,5 +68,15 @@ function delInscripcionEvento($inscripcion){
 
 function delInscripcionPack($inscripcion){
     $query = "DELETE FROM INSCRIPCIONPACK WHERE IDPACK = '".$inscripcion['idpack']."' AND IDUSUARIO = '".$inscripcion['idusuario']."'";
+    return $query;
+}
+
+function updateInscripcionEvento($id, $activo){
+    $query = "UPDATE INSCRIPCIONEVENTO SET ACTIVO = '".$activo."' WHERE IDINSCRIPCION = '".$id."'";
+    return $query;
+}
+
+function updateInscripcionPack($id, $activo){
+    $query = "UPDATE INSCRIPCIONPACK SET ACTIVO = '".$activo."' WHERE IDINSCRIPCIONPACK = '".$id."'";
     return $query;
 }

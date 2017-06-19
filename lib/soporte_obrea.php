@@ -22,8 +22,8 @@ class SoporteWS {
 	 */
 	public function convertirAVectorParaWS($elementoAConvertir) {
 		if (is_array($elementoAConvertir))
-			return $this->vectorAVectorDeObjetos($elementoAConvertir);
-		else
+            return $this->vectorAVectorDeObjetos($elementoAConvertir);
+        else
 			return $this->objetoAVector($elementoAConvertir);
 	}
 	public function convertirDeVectorDesdeWS($vector, $nombreClaseObjeto) {
