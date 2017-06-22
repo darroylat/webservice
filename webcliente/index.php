@@ -142,7 +142,7 @@
 
 </footer>
 <!--/.Footer-->
-
+<div></div>
 <?php include 'modal/modal-login.html'; ?>
 </body>
 </html>
