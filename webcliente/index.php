@@ -55,8 +55,8 @@
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                <div class="triangulo_top_left"></div>
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
+                <div class="triangulo_top_left"></div>
                 <div class="caption">
                     <h4>Thumbnail label h4</h4>
                     <p><?php echo substr($mensaje, 0, 20).'...'; ?></p>
