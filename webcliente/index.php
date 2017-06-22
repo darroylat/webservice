@@ -52,7 +52,7 @@
             <div class="thumbnail">
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h4>Thumbnail label</h4>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     <p style="text-align: right;"><a href="#" class="btn btn-primary" role="button">Ver más</a></p>
                 </div>
