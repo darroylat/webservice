@@ -20,12 +20,18 @@ class SoporteWS {
 	 * Convierte el objeto pasado como parametro a un vector para poder ser
 	 * retornado por un webservice
 	 */
-	public function convertirAVectorParaWS($elementoAConvertir) {
-		if (is_array($elementoAConvertir))
+	public function convertirAVectorParaWS($elementoAConvertir)
+    {
+        if (is_array($elementoAConvertir)) {
+            echo 'vector a vector de objetos';
             return $this->vectorAVectorDeObjetos($elementoAConvertir);
-        else
-			return $this->objetoAVector($elementoAConvertir);
-	}
+
+        }else{
+            echo 'objeto a vector';
+            return $this->objetoAVector($elementoAConvertir);
+
+        }
+    }
 	public function convertirDeVectorDesdeWS($vector, $nombreClaseObjeto) {
 		if (is_array($vector[0])) {
 			return $this->convertirVectorDeVectorAObjeto($vector, $nombreClaseObjeto);

@@ -1,7 +1,7 @@
 <?php
 
-require_once('../../nusoap/lib/nusoap.php');
-require_once('../../lib/soporte_obrea.php');
+require_once('../../../nusoap/lib/nusoap.php');
+require_once('../../../lib/soporte_obrea.php');
 $miURL = 'urn:mi_ws1';
 $server = new soap_server();
 $server->configureWSDL('ws_mountain', $miURL);

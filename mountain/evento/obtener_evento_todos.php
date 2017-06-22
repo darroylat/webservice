@@ -139,8 +139,8 @@ $server->wsdl->addComplexType('listadoEvento',
     'complexType',
     'array',
     '',
-    '',
-    array (array('ref'=>'SOAP-ENC:arrayType','wsdl:arrayType'=>'tns:Evento[]'))
+    'SOAP-ENC:Array',
+    array (array('ref'=>'SOAP-ENC:arrayType','wsdl:arrayType'=>'tns:Evento[]')),'tns:Evento'
 );
 $server->register('listarClientes', // Nombre de la funcion
     array('evento' => 'tns:entradaEvento'), // Parametros de entrada
