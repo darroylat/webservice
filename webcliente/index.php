@@ -57,7 +57,7 @@
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="caption">
                     <h4>Thumbnail label h4</h4>
-                    <p><?php echo $nuevoMensaje = $mensaje.str_split(0,20); ?></p>
+                    <p><?php echo substr($mensaje, 0, 20).'...'; ?></p>
                     <p style="text-align: right;"><a href="#" class="btn btn-primary" role="button">Ver más</a></p>
                 </div>
             </div>
