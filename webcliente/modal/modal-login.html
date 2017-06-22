@@ -12,7 +12,7 @@
                     <div class="col-md-10">
                         <div class="form-group">
                             <label>Usuario:</label>
-                            <input type="text" class="form-control" name="usuario" aria-describedby="sizing-addon2">
+                            <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="sizing-addon2">
                         </div>
                     </div>
                     <div class="col-md-1"></div>
@@ -22,15 +22,15 @@
                     <div class="col-md-10">
                         <div class="form-group">
                             <label>Contraseña:</label>
-                            <input type="text" class="form-control" name="clave" aria-describedby="sizing-addon2">
+                            <input type="text" class="form-control" id="clave" name="clave" aria-describedby="sizing-addon2">
                         </div>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Aceptar</button>
+                <button type="button" onclick="cerrarlogin()" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" onclick="login()" class="btn btn-primary">Aceptar</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
