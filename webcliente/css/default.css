@@ -1,18 +1,13 @@
 .imagenrelativa {
   position: relative;
 }
-.ribbon {
-    width: 0px;
-    height: 120px;
-    border-left: 50px solid #d9534f;
-    border-right: 50px solid #d9534f;
-    border-bottom: 35px solid transparent;
-}
 .triangulo_top_left {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 60px 60px 0 0;
+  border-width: 100px 100px 0 0;
   border-color: #070e8f transparent transparent transparent;
   position: absolute;
+  top: 0;
+  left: 0;
 }
