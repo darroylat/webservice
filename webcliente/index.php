@@ -1,3 +1,7 @@
+<?php
+  $mensaje = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,8 +56,8 @@
             <div class="thumbnail">
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="caption">
-                    <h4>Thumbnail label</h4>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <h4>Thumbnail label h4</h4>
+                    <p><?php echo $nuevoMensaje = $mensaje.str_split(0,20); ?></p>
                     <p style="text-align: right;"><a href="#" class="btn btn-primary" role="button">Ver más</a></p>
                 </div>
             </div>
@@ -62,7 +66,7 @@
             <div class="thumbnail">
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h5>Thumbnail label h5</h5>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                 </div>
@@ -72,7 +76,7 @@
             <div class="thumbnail">
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h6>Thumbnail label h6</h6>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                 </div>

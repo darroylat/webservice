@@ -1,8 +1,7 @@
 function login(){
-
+alert($('#usuario').val()+" ")$('#clave').val('');
 }
 function cerrarlogin(){
-  alert('cerrar');
   $('#usuario').val('');
   $('#clave').val('');
 }
