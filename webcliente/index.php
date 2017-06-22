@@ -55,7 +55,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                <button class="ribbon"></button>
+                <button class="triangulo_top_left"></button>
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="caption">
                     <h4>Thumbnail label h4</h4>
