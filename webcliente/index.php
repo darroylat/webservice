@@ -62,6 +62,7 @@
                     <p><?php echo substr($mensaje, 0, 20).'...'; ?></p>
                     <p style="text-align: right;"><a href="#" class="btn btn-primary" role="button">Ver más</a></p>
                 </div>
+                <button class="triangulo-equilatero-bottom-left"></button>
             </div>
         </div>
         <div class="col-sm-6 col-md-4">
