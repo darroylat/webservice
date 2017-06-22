@@ -54,6 +54,7 @@
 
     <div class="row">
         <div class="col-sm-6 col-md-4">
+          <div class="triangulo_top_left"></div>
             <div class="thumbnail">
                 <div class="triangulo_top_left"></div>
                 <img class="img-rounded" src="images/montana.jpg" alt="...">

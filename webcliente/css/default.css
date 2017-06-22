@@ -6,8 +6,9 @@
     border-bottom: 35px solid transparent;
 }
 .triangulo_top_left {
-    width: 0;
-    height: 0;
-    border-top: 100px solid #000;
-    border-right: 100px solid transparent;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 200px 200px 0 0;
+  border-color: #070e8f transparent transparent transparent;
 }
