@@ -54,7 +54,7 @@
 
     <div class="row">
         <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail imagenrelativa">
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="triangulo_top_left"></div>
                 <div class="caption">

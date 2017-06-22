@@ -1,3 +1,6 @@
+.imagenrelativa {
+  position: relative;
+}
 .ribbon {
     width: 0px;
     height: 120px;
