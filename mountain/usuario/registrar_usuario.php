@@ -4,49 +4,37 @@ require_once('../../nusoap/lib/nusoap.php');
 //require_once('../../lib/soporte_obrea.php');
 include('../../lib/conexion.php');
 include('../../lib/consultas.php');
-$miURL = 'urn:mi_ws1';
+$miURL = 'urn:Usuario';
 $server = new soap_server();
-$server->configureWSDL('ws_mountain', $miURL);
+$server->configureWSDL('Usuario', $miURL);
 $server->wsdl->schemaTargetNamespace = $miURL;
 
-$server->wsdl->addComplexType('entradaUsuario',
-    'complexType',
-    'struct',
-    'all',
-    '',
-    array(
-        'usuario' => array('name' => 'usuario', 'type' => 'xsd:string'),
-        'clave' => array('name' => 'clave', 'type' => 'xsd:string'),
-        'rut' => array('name' => 'rut', 'type' => 'xsd:string'),
-        'pass' => array('name' => 'pass', 'type' => 'xsd:string'),
-        'nombre' => array('name' => 'nombre', 'type' => 'xsd:string'),
-        'apellido' => array('name' => 'apellido', 'type' => 'xsd:string'),
-        'email' => array('name' => 'email', 'type' => 'xsd:string'),
-        'fecha' => array('name' => 'fecha', 'type' => 'xsd:string'),
-        'sexo' => array('name' => 'sexo', 'type' => 'xsd:string'),
-        'telefono' => array('name' => 'telefono', 'type' => 'xsd:string'),
-        'instagram' => array('name' => 'instagram', 'type' => 'xsd:string'),
-        'auto' => array('name' => 'auto', 'type' => 'xsd:string'),
-        'autocom' => array('name' => 'autocom', 'type' => 'xsd:string'),
-        'primer' => array('name' => 'primer', 'type' => 'xsd:string')
-    )
+$entrada = array(
+    'usuario' => 'xsd:string',
+    'clave' => 'xsd:string',
+    'rut' => 'xsd:string',
+    'pass' => 'xsd:string',
+    'nombre' => 'xsd:string',
+    'apellido' => 'xsd:string',
+    'email' => 'xsd:string',
+    'fecha' => 'xsd:string',
+    'sexo' => 'xsd:string',
+    'telefono' => 'xsd:string',
+    'instagram' => 'xsd:string',
+    'auto' => 'xsd:string',
+    'autocom' => 'xsd:string',
+    'primer' => 'xsd:string'
 );
-
-$server->wsdl->addComplexType('salidaUsuario',
-    'complexType',
-    'struct',
-    'all',
-    '',
-    array(
-        'codigo' => array('name' => 'codigo', 'type' => 'xsd:string'),
-        'descripcion' => array('name' => 'descripcion', 'type' => 'xsd:string')
-    )
-);
+$salida = array('return' => 'xsd:string');
 
 $server->register('registraUsuario', // Nombre de la funcion
-    array('usuario' => 'tns:entradaUsuario'), // Parametros de entrada
-    array('return' => 'tns:salidaUsuario'), // Parametros de salida
-    $miURL
+    $entrada, // Parametros de entrada
+    $salida, // Parametros de salida
+    $miURL, // namespace
+    $miURL.'#registraUsuario', // soapaction
+    'rpc', // style (llamada de procedimiento remoto)
+    'encoded', // use
+    'Registra nuevo usuario para la cuenta del cliente' // Documentacion del método
 );
 
 function registraUsuario($usuario){
@@ -66,15 +54,15 @@ function registraUsuario($usuario){
     $respuesta[] = null;
 
     if($filasGetUsuario > 0){
-        $respuesta = array('codigo' => '0002', 'descripcion' => 'Usuario existe.');
+        $respuesta = '0002|Usuario existe.|}~';
     }else{
         $queryRegistrarUsuario = putUsuario($usuario);
         ejecutar_sql($conexionCliente, $queryRegistrarUsuario);
 
         if($conexionCliente->affected_rows > 0){
-            $respuesta = array('codigo' => '0000', 'descripcion' => 'Usuario registrado correctamente.');
+            $respuesta = '0000|Usuario registrado correctamente.|}~';
         }else{
-            $respuesta = array('codigo' => '0001', 'descripcion' => 'Error al registrar usuario.');
+            $respuesta = '0001|Error al registrar usuario.|}~';
         }
     }
     return $respuesta;

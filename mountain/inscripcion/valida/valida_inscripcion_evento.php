@@ -1,67 +1,54 @@
 <?php
 
-require_once('../../nusoap/lib/nusoap.php');
-//require_once('../../lib/soporte_obrea.php');
-include('../../lib/conexion.php');
-include('../../lib/consultas.php');
-$miURL = 'urn:mi_ws1';
+require_once('../../../nusoap/lib/nusoap.php');
+include('../../../lib/conexion.php');
+include('../../../lib/consultas.php');
+$miURL = 'urn:Inscripcion';
 $server = new soap_server();
-$server->configureWSDL('ws_mountain', $miURL);
+$server->configureWSDL('Inscripcion', $miURL);
 $server->wsdl->schemaTargetNamespace = $miURL;
 
-$server->wsdl->addComplexType('entradaValidaInscripcion',
-    'complexType',
-    'struct',
-    'all',
-    '',
-    array(
-        'usuario' => array('name' => 'usuario', 'type' => 'xsd:string'),
-        'clave' => array('name' => 'clave', 'type' => 'xsd:string'),
-        'idusuario' => array('name' => 'idusuario', 'type' => 'xsd:string'),
-        'idevento' => array('name' => 'idevento', 'type' => 'xsd:string')
-    )
+$entrada = array(
+    'usuario'=> 'xsd:string',
+    'clave' => 'xsd:string',
+    'idusuario' => 'xsd:string',
+    'idevento' => 'xsd:string'
 );
-
-$server->wsdl->addComplexType('salidaValidaInscripcion',
-    'complexType',
-    'struct',
-    'all',
-    '',
-    array(
-        'codigo' => array('name' => 'codigo', 'type' => 'xsd:string'),
-        'descripcion' => array('name' => 'descripcion', 'type' => 'xsd:string')
-    )
-);
+$salida = array('return' => 'xsd:string');
 
 $server->register('validaInscripcion', // Nombre de la funcion
-    array('inscripcion' => 'tns:entradaValidaInscripcion'), // Parametros de entrada
-    array('return' => 'tns:salidaValidaInscripcion'), // Parametros de salida
-    $miURL
+    $entrada, // Parametros de entrada
+    $salida, // Parametros de salida
+    $miURL, // namespace
+    $miURL.'#validaInscripcion', // soapaction
+    'rpc', // style (llamada de procedimiento remoto)
+    'encoded', // use
+    'Valida inscripcion al evento' // Documentacion del método
 );
 
-function validaInscripcion($inscripcion){
+function validaInscripcion($usuario, $clave, $idusuario, $idevento){
 
     $conexionAdmin = connectDB_Admin();
-    $query = getCliente($inscripcion['usuario'], $inscripcion['clave']);
+    $query = getCliente($usuario, $clave);
     $resultado = ejecutar_sql($conexionAdmin, $query);
     $cliente = $resultado->fetch_array();
 
     $conexionCliente = connectDB_Cliente($cliente['DATOSCLIENTE']);
 
-    $queryInscripcion = getInscripcionEvento($inscripcion);
+    $queryInscripcion = getInscripcionEvento($idevento, $idusuario);
     $resultadoInscripcion = ejecutar_sql($conexionCliente, $queryInscripcion);
 
     $filas = mysqli_num_rows($resultadoInscripcion);
     $respuesta[] = null;
 
     if($filas == 0){
-        $respuesta = array('codigo' => '0001', 'descripcion' => 'No se encontro incripcion al evento.');
+        $respuesta = '0001|No se encontro incripcion al evento.|}~';
     }else{
         $ins = $resultadoInscripcion->fetch_array();
         if ($ins['ACTIVO'] == 1){
-            $respuesta = array('codigo' => '0000', 'descripcion' => 'Inscripcion al evento correcta.');
+            $respuesta = '0000|Inscripcion al evento correcta.|}~';
         }else{
-            $respuesta = array('codigo' => '0002', 'descripcion' => 'Inscripcion al evento inactiva.');
+            $respuesta = '0002|Inscripcion al evento inactiva.|}~';
         }
     }
 

@@ -1,19 +1,10 @@
 <?php
- session_start();
-/*if (!empty($_POST)){
-    if ($_POST['tipo'] == 0){
-        echo 'Ingreso';
-        alert('Registro');
-    }else{
-        echo 'Registro';
-    }
-}*/
-    include 'proceso/remoteService.php';
-  $mensaje = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.";
+session_start();
+$mensaje = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.";
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
@@ -50,12 +41,12 @@
                 <li><a href="#">Page 3</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <?php if(isset($_SESSION['id'] )){ ?>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span><?=$_SESSION['usuario'];?></a></li>
-                <li><a href="proceso/destruir_session.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <?php if(isset($_SESSION['usuario'] )){ ?>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span><?=$_SESSION['usuario'];?></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 <?php }else{ ?>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#myModalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 <?php } ?>
             </ul>
         </div>
@@ -63,69 +54,9 @@
 </nav>
 
 <div class="container">
-    <h1>Salidas Activas <span class="label label-success">Ver más</span></h1>
+    <h1>Salidas Activas</h1>
     <!--data-toggle="modal" data-target="#myModalEvento"-->
     <div class="row">
-        <?php
-
-        $evento = split('\#',verEvento(6));
-        if ($evento[0] == '0000'){
-            for ($i = 1;$i < count($evento)-1;$i++){
-                $campos = split('\|', $evento[$i]);
-                ?>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail imagenrelativa">
-                        <img class="img-rounded" src="images/montana.jpg" alt="...">
-                        <div class="triangulo_top_left"></div>
-                        <div class="botonDerecha">
-                            <a href="#" onclick="showModal(1)" style="text-align: left;" class="btn btn-primary" role="button">
-                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <h4><?= substr($campos[1],0, 39)?></h4>
-                            <p><?php echo substr($campos[4], 0, 140).'...'; ?></p>
-                            <p>Ubicacion: <?=$campos[3]?></p>
-                            <p>Sendero: <?=$campos[2]?></p>
-                            <p>Fecha y hora inicio </br> <?=$campos[5]?> </br> <?=$campos[6]?></p>
-                            <p>Valor: <?=$campos[7]?></p>
-                            <p>Punto de encuentro: <?=$campos[8]?></p>
-                            <p style="text-align: center;">
-                                <?php
-                                if (isset($_SESSION['id'])){
-                                    $validaInscripcion = validarInscripcionEvento($campos[0], $_SESSION['id']);
-                                    $splitinscripcion = split('\|',$validaInscripcion);
-                                    if($splitinscripcion[0] == '0000'){
-                                        ?>
-                                        <a href="#" class="btn btn-danger" role="button">Eliminar inscripción</a>
-                                        <?php
-                                    }else{
-                                        ?>
-                                        <a href="#" class="btn btn-primary" role="button">Inscribirse</a>
-                                        <?php
-                                    }
-                                }else{
-                                    ?>
-                                    <a href="#" class="btn btn-primary" role="button" disabled="disabled">Inscribirse</a>
-                                    <?php
-                                }
-                                ?>
-
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <?php
-            }
-        }else{
-            echo '<h2>No existen Eventos</h2>';
-        }
-         verEvento(6);
-
-
-        ?>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail imagenrelativa">
                 <img class="img-rounded" src="images/montana.jpg" alt="...">

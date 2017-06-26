@@ -4,28 +4,16 @@ require_once('../../nusoap/lib/nusoap.php');
 require_once('../../lib/soporte_obrea.php');
 include('../../lib/conexion.php');
 include('../../lib/consultas.php');
-$miURL = 'urn:mi_ws1';
+$miURL = 'urn:Evento';
 $server = new soap_server();
-$server->configureWSDL('ws_mountain', $miURL);
+$server->configureWSDL('Evento', $miURL);
 $server->wsdl->schemaTargetNamespace=$miURL;
 
 /*
  *  Ejemplo 3: listarClientes es la funcion mas compleja que voy realizar, no recibe parametros
  *  y retorna un listado de clientes. Utiliza varios metodos del ejemplo 2.
  */
-class Evento {
-    var $idevento;
-    var $nombre;
-    var $nombresendero;
-    var $nombreubicacion;
-    var $descripcion;
-    var $fecha;
-    var $hora;
-    var $valor;
-    var $punto;
-    var $foto;
-    var $estado;
-}
+
 class EventoDAO {
     /**
      * getCliente($id) : Cliente
@@ -33,32 +21,8 @@ class EventoDAO {
      * y obtener la informacion de la base directamente
      */
     function getEvento($evento) {
-        $idevento = $evento['IDEVENTO'];
-        $nombre = $evento['NOMBRE'];
-        $nombresendero = $evento['NOMBRESENDERO'];
-        $nombreubicacion = $evento['NOMBREUBICACION'];
-        $descripcion = $evento['DESCRIPCION'];
-        $fecha = $evento['FECHA'];
-        $hora = $evento['HORA'];
-        $valor = $evento['VALOR'];
-        $punto = $evento['PUNTO'];
-        $foto = $evento['FOTO'];
-        $estado = $evento['ESTADO'];
-
-        $obj = new Evento();
-        //echo $evento['NOMBRESENDERO'];
-        $obj->idevento = $idevento;
-        $obj->nombre = $nombre;
-        $obj->nombresendero = $nombresendero;
-        $obj->nombreubicacion = $nombreubicacion;
-        $obj->descripcion = $descripcion;
-        $obj->fecha = $fecha;
-        $obj->hora = $hora;
-        $obj->valor = $valor;
-        $obj->punto = $punto;
-        $obj->foto = $foto;
-        $obj->estado = $estado;
-
+        $obj = $evento['IDEVENTO'].'|'.$evento['NOMBRE'].'|'.$evento['NOMBRESENDERO'].'|'.$evento['NOMBREUBICACION'].'|'.$evento['DESCRIPCION'].'|';
+        $obj .= $evento['FECHA'].'|'.$evento['HORA'].'|'.$evento['VALOR'].'|'.$evento['PUNTO'].'|'.$evento['FOTO'].'|'.$evento['ESTADO'].'#';
         return $obj;
     }
 
@@ -73,93 +37,43 @@ class EventoDAO {
         $queryEventos = getTodosEvento(); //agregar cantidad en la query
         $listadoEvento = ejecutar_sql($conexionCliente, $queryEventos);
 
-        $numero = 0;
+        $salida = '0000#';
 
         while ($evento = $listadoEvento->fetch_assoc()) {
-            $rta[$numero] = $this->getEvento($evento);
-            /*$obj = new Evento();
-            echo $evento['NOMBRE'];
-            $obj->idevento = $evento['IDEVENTO'];
-            $obj->nombre = $evento['NOMBRE'];
-            $obj->nombresendero = $evento['NOMBRESENDERO'];
-            $obj->nombreubicacion = $evento['NOMBREUBICACION'];
-            $obj->descripcion = $evento['DESCRIPCION'];
-            $obj->fecha = $evento['FECHA'];
-            $obj->hora = $evento['HORA'];
-            $obj->valor = $evento['VALOR'];
-            $obj->punto = $evento['PUNTO'];
-            $obj->foto = $evento['FOTO'];
-            $obj->estado = $evento['ESTADO'];
-
-            $rta[$numero] = obj;*/
-            //echo $numero;
-            $numero++;
-
+           $salida .= $this->getEvento($evento);
         }
-
-        //$rta[0] = $this->getCliente(1);
-        //$rta[1] = $this->getCliente(2);
-        return $rta;
+        $salida .= '}~';
+        return $salida;
     }
 }
 
-$server->wsdl->addComplexType('entradaEvento',
-    'complexType',
-    'struct',
-    'all',
-    '',
-    array(
-        'usuario' => array('name' => 'usuario', 'type' => 'xsd:string'),
-        'clave' => array('name' => 'clave',	'type' => 'xsd:string'),
-        'cantidad' => array('name' => 'cantidad', 'type' => 'xsd:string')
-    )
+$entrada = array('usuario' => 'xsd:string',
+                'clave' => 'xsd:string',
+                'cantidad' => 'xsd:string');
+
+$salida = array('return' => 'xsd:string');
+
+$server->register('listarEventos', // Nombre de la funcion
+    $entrada, // Parametros de entrada
+    $salida, // Parametros de salida
+    $miURL, // namespace
+    $miURL.'#listarEventos', // soapaction
+    'rpc', // style (llamada de procedimiento remoto)
+    'encoded', // use
+    'Muestra los eventos del cliente' // Documentacion del método
 );
 
-$server->wsdl->addComplexType('Evento',
-    'complexType',
-    'struct',
-    'all',
-    '',
-    array(
-        'idevento' => array('name' => 'idevento', 'type' => 'xsd:string'),
-        'nombre' => array('name' => 'nombre',	'type' => 'xsd:string'),
-        'nombresendero' => array('name' => 'nombresendero', 'type' => 'xsd:string'),
-        'nombreubicacion' => array('name' => 'nombreubicacion', 'type' => 'xsd:string'),
-        'descripcion' => array('name' => 'descripcion', 'type' => 'xsd:string'),
-        'fecha' => array('name' => 'fecha', 'type' => 'xsd:string'),
-        'hora' => array('name' => 'hora', 'type' => 'xsd:string'),
-        'valor' => array('name' => 'valor', 'type' => 'xsd:string'),
-        'punto' => array('name' => 'punto', 'type' => 'xsd:string'),
-        'foto' => array('name' => 'foto', 'type' => 'xsd:string'),
-        'estado' => array('name' => 'estado', 'type' => 'xsd:string')
-    )
-);
-
-$server->wsdl->addComplexType('listadoEvento',
-    'complexType',
-    'array',
-    '',
-    'SOAP-ENC:Array',
-    array (array('ref'=>'SOAP-ENC:arrayType','wsdl:arrayType'=>'tns:Evento[]')),'tns:Evento'
-);
-$server->register('listarClientes', // Nombre de la funcion
-    array('evento' => 'tns:entradaEvento'), // Parametros de entrada
-    array('return' => 'tns:listadoEvento'), // Parametros de salida
-    $miURL
-);
-
-function listarClientes($evento) {
+function listarEventos($usuario, $clave, $cantidad) {
     $dao = new EventoDAO();
 
     $conexionAdmin = connectDB_Admin();
-    $query = getCliente($evento['usuario'], $evento['clave']);
+    $query = getCliente($usuario, $clave);
     $resultado = ejecutar_sql($conexionAdmin, $query);
     $cliente = $resultado->fetch_array();
 
     $listado = $dao->getList($cliente['DATOSCLIENTE']);
-    $objSoporte = new SoporteWS();
-    $respuesta = $objSoporte->convertirAVectorParaWS($listado);
-    return new soapval('return', 'tns:listadoEvento', $respuesta);
+
+    return $listado;
 }
 
 

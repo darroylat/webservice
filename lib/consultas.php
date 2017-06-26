@@ -6,7 +6,7 @@
  * Time: 22:36
  */
 function getCliente($usuario, $clave){
-    $query = "SELECT * FROM CLIENTE WHERE USUARIOCLIENTE = '".$usuario."' AND PASSCLIENTE = '".$clave."'";
+    $query = "SELECT * FROM MOUNTAIN_ADMIN.CLIENTE WHERE USUARIOCLIENTE = '".$usuario."' AND PASSCLIENTE = '".$clave."'";
     return $query;
 }
 
@@ -49,9 +49,9 @@ function putInscripcionPack($inscripcion){
     return $query;
 }
 
-function getInscripcionEvento($inscripcion){
+function getInscripcionEvento($idevento, $idusuario){
     $query = "SELECT * FROM INSCRIPCIONEVENTO 
-              WHERE IDEVENTO = '".$inscripcion['idevento']."' AND IDUSUARIO = '".$inscripcion['idusuario']."'";
+              WHERE IDEVENTO = '".$idevento."' AND IDUSUARIO = '".$idusuario."'";
     return $query;
 }
 
