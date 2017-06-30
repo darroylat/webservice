@@ -1,25 +1,13 @@
 <?php
 
 require_once('../../nusoap/lib/nusoap.php');
-//require_once('../../lib/soporte_obrea.php');
 include('../../lib/conexion.php');
 include('../../lib/consultas.php');
-$miURL = 'urn:mi_ws1';
+$miURL = 'urn:Evento';
 $server = new soap_server();
-$server->configureWSDL('ws_mountain', $miURL);
+$server->configureWSDL('Evento', $miURL);
 $server->wsdl->schemaTargetNamespace = $miURL;
 
-$server->wsdl->addComplexType('entradaEvento',
-    'complexType',
-    'struct',
-    'all',
-    '',
-    array(
-        'usuario' => array('name' => 'usuario', 'type' => 'xsd:string'),
-        'clave' => array('name' => 'clave', 'type' => 'xsd:string'),
-        'codigo' => array('name' => 'codigo', 'type' => 'xsd:string')
-    )
-);
 
 $server->wsdl->addComplexType('salidaEvento',
     'complexType',
@@ -37,35 +25,52 @@ $server->wsdl->addComplexType('salidaEvento',
         'foto' => array('name' => 'foto', 'type' => 'xsd:string')
     )
 );
+$entrada = array('usuario' => 'xsd:string',
+                'clave' => 'xsd:string',
+                'codigo' => 'xsd:string');
+
+$salida = array('return' => 'xsd:string');
 
 $server->register('verEvento', // Nombre de la funcion
-    array('evento' => 'tns:entradaEvento'), // Parametros de entrada
-    array('return' => 'tns:salidaEvento'), // Parametros de salida
-    $miURL
+    $entrada, // Parametros de entrada
+    $salida, // Parametros de salida
+    $miURL, // namespace
+    $miURL.'#verEvento', // soapaction
+    'rpc', // style (llamada de procedimiento remoto)
+    'encoded', // use
+    'Muestra el evento seleccionado por el usuario' // Documentacion del método
 );
 
-function verEvento($evento){
+function verEvento($usuario, $clave, $codigo){
 
     $conexionAdmin = connectDB_Admin();
-    $query = getCliente($evento['usuario'], $evento['clave']);
+    $query = getCliente($usuario, $clave);
     $resultado = ejecutar_sql($conexionAdmin, $query);
     $cliente = $resultado->fetch_array();
 
     $conexionCliente = connectDB_Cliente($cliente['DATOSCLIENTE']);
-    $queryEvento = getEventoIndividual($evento['codigo']);
+    $queryEvento = getEventoIndividual($codigo);
     $resultadoEvento = ejecutar_sql($conexionCliente, $queryEvento);
 
     $eventoArray = $resultadoEvento->fetch_array();
 
-    $respuesta = array('nombre' => $eventoArray['NOMBRE'],
-                        'nombresendero' => $eventoArray['NOMBRESENDERO'],
-                        'descripcion' => $eventoArray['DESCRIPCION'],
-                        'fecha' => $eventoArray['FECHA'],
-                        'hora' => $eventoArray['HORA'],
-                        'valor' => $eventoArray['VALOR'],
-                        'punto' => $eventoArray['PUNTO'],
-                        'foto' => $eventoArray['FOTO']
-                );
+
+
+    $respuesta = '0000|';
+    $respuesta .= $eventoArray['NOMBRE'].'|'.$eventoArray['NOMBRESENDERO'].'|'.$eventoArray['DESCRIPCION'].'|';
+    $respuesta .= $eventoArray['FECHA'].'|'.$eventoArray['HORA'].'|'.$eventoArray['VALOR'].'|';
+    $respuesta .= $eventoArray['PUNTO'].'|'.$eventoArray['FOTO'].'|';
+
+    $queryEquipos = getEquipoEvento($codigo);
+
+    $resultadoEquipos = ejecutar_sql($conexionCliente,$queryEquipos);
+
+    $equipos = '';
+
+    while ($equipo = $resultadoEquipos->fetch_assoc()) {
+         $equipos .= $equipo['IDEQUIPOTRECK'].'#'.$equipo['DESCRIPCION'].'!';
+    }
+    $respuesta .= $equipos.'|}~';
 
     return $respuesta;
 }

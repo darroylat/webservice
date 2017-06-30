@@ -37,8 +37,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li class="dropdown">
+                <li class="active"><a href="index.php">Inicio</a></li>
+                <!--li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Page 1-1</a></li>
@@ -47,7 +47,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="#">Page 3</a></li-->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if(isset($_SESSION['id'] )){ ?>
@@ -67,7 +67,6 @@
     <!--data-toggle="modal" data-target="#myModalEvento"-->
     <div class="row">
         <?php
-
         $evento = split('\#',verEvento(6));
         if ($evento[0] == '0000'){
             for ($i = 1;$i < count($evento)-1;$i++){
@@ -76,9 +75,9 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail imagenrelativa">
                         <img class="img-rounded" src="images/montana.jpg" alt="...">
-                        <div class="triangulo_top_left"></div>
+                        <!--div class="triangulo_top_left"></div-->
                         <div class="botonDerecha">
-                            <a href="#" onclick="showModal(1)" style="text-align: left;" class="btn btn-primary" role="button">
+                            <a href="evento.php?evento=<?=$campos[0]?>"  style="text-align: left;" class="btn btn-primary" role="button">
                                 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                             </a>
                         </div>
@@ -88,7 +87,7 @@
                             <p>Ubicacion: <?=$campos[3]?></p>
                             <p>Sendero: <?=$campos[2]?></p>
                             <p>Fecha y hora inicio </br> <?=$campos[5]?> </br> <?=$campos[6]?></p>
-                            <p>Valor: <?=$campos[7]?></p>
+                            <p>Valor: <?=$campos[7]?> CLP.</p>
                             <p>Punto de encuentro: <?=$campos[8]?></p>
                             <p style="text-align: center;">
                                 <?php
@@ -97,11 +96,11 @@
                                     $splitinscripcion = split('\|',$validaInscripcion);
                                     if($splitinscripcion[0] == '0000'){
                                         ?>
-                                        <a href="#" class="btn btn-danger" role="button">Eliminar inscripción</a>
+                                        <a href="proceso/get.inscripcionEvento.php?idusuario=<?=$_SESSION['id']?>&idevento=<?=$campos[0]?>&tipo=0" class="btn btn-danger" role="button">Eliminar inscripción</a>
                                         <?php
                                     }else{
                                         ?>
-                                        <a href="#" class="btn btn-primary" role="button">Inscribirse</a>
+                                        <a href="proceso/get.inscripcionEvento.php?idusuario=<?=$_SESSION['id']?>&idevento=<?=$campos[0]?>&tipo=1" class="btn btn-primary" role="button">Inscribirse</a>
                                         <?php
                                     }
                                 }else{
@@ -122,11 +121,8 @@
         }else{
             echo '<h2>No existen Eventos</h2>';
         }
-         verEvento(6);
-
-
         ?>
-        <div class="col-sm-6 col-md-4">
+        <!--div class="col-sm-6 col-md-4">
             <div class="thumbnail imagenrelativa">
                 <img class="img-rounded" src="images/montana.jpg" alt="...">
                 <div class="triangulo_top_left"></div>
@@ -147,117 +143,8 @@
 
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail imagenrelativa">
-                <img class="img-rounded" src="images/montana.jpg" alt="...">
-                <div class="triangulo_top_left"></div>
-                <div class="botonDerecha">
-                    <a href="#" style="text-align: left;" class="btn btn-primary" role="button">
-                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Thumbnail label h4</h4>
-                    <p><?php echo substr($mensaje, 0, 140).'...'; ?></p>
-                    <p>Ubicacion</p>
-                    <p>Sendero</p>
-                    <p>Fecha y hora inicio</p>
-                    <p style="text-align: center;">
-                        <a href="#" class="btn btn-primary" role="button">Inscribirse</a>
-                    </p>
+        </div-->
 
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail imagenrelativa">
-                <img class="img-rounded" src="images/montana.jpg" alt="...">
-                <div class="triangulo_top_left"></div>
-                <div class="botonDerecha">
-                    <a href="#" style="text-align: left;" class="btn btn-primary" role="button">
-                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Thumbnail label h4</h4>
-                    <p><?php echo substr($mensaje, 0, 140).'...'; ?></p>
-                    <p>Ubicacion</p>
-                    <p>Sendero</p>
-                    <p>Fecha y hora inicio</p>
-                    <p style="text-align: center;">
-                        <a href="#" class="btn btn-primary" role="button">Inscribirse</a>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail imagenrelativa">
-                <img class="img-rounded" src="images/montana.jpg" alt="...">
-                <div class="triangulo_top_left"></div>
-                <div class="botonDerecha">
-                    <a href="#" style="text-align: left;" class="btn btn-primary" role="button">
-                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Thumbnail label h4</h4>
-                    <p><?php echo substr($mensaje, 0, 140).'...'; ?></p>
-                    <p>Ubicacion</p>
-                    <p>Sendero</p>
-                    <p>Fecha y hora inicio</p>
-                    <p style="text-align: center;">
-                        <a href="#" class="btn btn-primary" role="button">Inscribirse</a>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail imagenrelativa">
-                <img class="img-rounded" src="images/montana.jpg" alt="...">
-                <div class="triangulo_top_left"></div>
-                <div class="botonDerecha">
-                    <a href="#" style="text-align: left;" class="btn btn-primary" role="button">
-                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Thumbnail label h4</h4>
-                    <p><?php echo substr($mensaje, 0, 140).'...'; ?></p>
-                    <p>Ubicacion</p>
-                    <p>Sendero</p>
-                    <p>Fecha y hora inicio</p>
-                    <p style="text-align: center;">
-                        <a href="#" class="btn btn-primary" role="button">Inscribirse</a>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail imagenrelativa">
-                <img class="img-rounded" src="images/montana.jpg" alt="...">
-                <div class="triangulo_top_left"></div>
-                <div class="botonDerecha">
-                    <a href="#" style="text-align: left;" class="btn btn-primary" role="button">
-                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="caption">
-                    <h4>Thumbnail label h4</h4>
-                    <p><?php echo substr($mensaje, 0, 140).'...'; ?></p>
-                    <p>Ubicacion</p>
-                    <p>Sendero</p>
-                    <p>Fecha y hora inicio</p>
-                    <p style="text-align: center;">
-                        <a href="#" class="btn btn-primary" role="button">Inscribirse</a>
-                    </p>
-
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>

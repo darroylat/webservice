@@ -37,9 +37,9 @@ function putUsuario($usuario){
     return $query;
 }
 
-function putInscripcionEvento($inscripcion){
+function putInscripcionEvento($idevento, $idusuario){
     $query = "INSERT INTO INSCRIPCIONEVENTO (IDEVENTO, IDUSUARIO, ACTIVO, PAGADO)
-              VALUES ('".$inscripcion['idevento']."', '".$inscripcion['idusuario']."', 1, 0)";
+              VALUES ('".$idevento."', '".$idusuario."', 1, 0)";
     return $query;
 }
 
@@ -78,5 +78,13 @@ function updateInscripcionEvento($id, $activo){
 
 function updateInscripcionPack($id, $activo){
     $query = "UPDATE INSCRIPCIONPACK SET ACTIVO = '".$activo."' WHERE IDINSCRIPCIONPACK = '".$id."'";
+    return $query;
+}
+
+function getEquipoEvento($id){
+    $query = "SELECT DISTINCT E.IDEQUIPOTRECK, M.DESCRIPCION FROM EQUIPOEVENTO E
+                JOIN MAESTROEQUIPO M ON
+                M.IDEQUIPOTRECK = E.IDEQUIPOTRECK
+                WHERE IDEVENTO = '".$id."'  ORDER BY E.IDEQUIPOTRECK ASC";
     return $query;
 }
