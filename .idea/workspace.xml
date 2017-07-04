@@ -15,10 +15,9 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webcliente/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="782">
+              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1498793301582" expanded="false" signature="6344:6361" ph="..." />
                 <marker date="1498793301582" expanded="false" signature="6852:6871" ph="..." />
               </folding>
@@ -29,31 +28,41 @@
       <file leaf-file-name="evento.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webcliente/evento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+            <state relative-caret-position="260">
+              <caret line="142" column="49" lean-forward="true" selection-start-line="142" selection-start-column="49" selection-end-line="142" selection-end-column="49" />
               <folding>
-                <marker date="1498793518535" expanded="true" signature="188:244" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="2660:4450" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="2796:3252" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="2930:3241" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3274:3395" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3309:3329" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3364:3384" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3417:3874" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3448:3553" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3584:3863" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3896:4443" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="3927:4282" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="4313:4432" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="4516:5603" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="4586:5331" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="4612:5320" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="4680:4848" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="4951:5270" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="5017:5251" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="5414:5569" ph="..." />
-                <marker date="1498793518535" expanded="true" signature="5452:5558" ph="..." />
+                <marker date="1499129185697" expanded="true" signature="188:244" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webcliente/upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post.comprobante.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webcliente/proceso/post.comprobante.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ingresa_comprobante.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mountain/comprobante/ingresa_comprobante.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="64" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,17 +70,41 @@
       <file leaf-file-name="class.servicios.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webcliente/proceso/class.servicios.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1649">
-              <caret line="97" column="36" lean-forward="false" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+            <state relative-caret-position="17">
+              <caret line="239" column="0" lean-forward="false" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
               <folding>
-                <marker date="1498506419771" expanded="true" signature="540:549" ph="..." />
-                <marker date="1498506419771" expanded="true" signature="1382:1392" ph="..." />
-                <marker date="1498506419771" expanded="true" signature="1986:1995" ph="..." />
-                <marker date="1498506419771" expanded="true" signature="3184:3193" ph="..." />
-                <marker date="1498506419771" expanded="true" signature="4405:4414" ph="..." />
-                <marker date="1498506419771" expanded="true" signature="5682:5691" ph="..." />
-                <marker date="1498506419771" expanded="true" signature="6948:6957" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="540:549" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="1382:1392" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="1986:1995" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="3184:3193" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="4405:4414" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="5682:5691" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="6948:6957" ph="..." />
+                <marker date="1499026610493" expanded="true" signature="8214:8223" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nusoap_client_ejFile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../EjemploFile/nusoap_client_ejFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="36" column="63" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="63" />
+              <folding>
+                <marker date="1499055399527" expanded="true" signature="393:403" ph="..." />
+                <marker date="1499055399527" expanded="true" signature="1121:1131" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nusoap_server_ejFile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../EjemploFile/nusoap_server_ejFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,9 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/ejconexion.php" />
-        <option value="$PROJECT_DIR$/ejemplo/index.php" />
-        <option value="$PROJECT_DIR$/ejemplo/ejemplo.php" />
         <option value="$PROJECT_DIR$/evento/todos/index.php" />
         <option value="$PROJECT_DIR$/evento/varios/index.php" />
         <option value="$PROJECT_DIR$/evento/uno/index.php" />
@@ -143,9 +173,15 @@
         <option value="$PROJECT_DIR$/mountain/evento/obtener_evento_individual.php" />
         <option value="$PROJECT_DIR$/webcliente/modal/modal-evento-individual.html" />
         <option value="$PROJECT_DIR$/webcliente/proceso/verInformacionEvento.php" />
-        <option value="$PROJECT_DIR$/webcliente/proceso/class.servicios.php" />
         <option value="$PROJECT_DIR$/webcliente/js/default.js" />
         <option value="$PROJECT_DIR$/webcliente/index.php" />
+        <option value="$PROJECT_DIR$/mountain/comprobante/ingresa_comprobante.php" />
+        <option value="$PROJECT_DIR$/webcliente/proceso/class.servicios.php" />
+        <option value="$USER_HOME$/Downloads/NuSOAP_EjemploFile/nusoap_client_ejFile.php" />
+        <option value="$PROJECT_DIR$/../EjemploFile/nusoap_server_ejFile.php" />
+        <option value="$PROJECT_DIR$/../EjemploFile/nusoap_client_ejFile.php" />
+        <option value="$PROJECT_DIR$/webcliente/proceso/post.comprobante.php" />
+        <option value="$PROJECT_DIR$/webcliente/upload.php" />
         <option value="$PROJECT_DIR$/webcliente/evento.php" />
       </list>
     </option>
@@ -178,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -209,83 +246,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="proceso" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcliente" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="modal" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcliente" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcliente" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fileinput.js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcliente" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,31 +394,16 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ejemplo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservice" />
+              <option name="myItemId" value="mountain" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ejemplo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calculadora" />
+              <option name="myItemId" value="comprobante" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -578,25 +524,28 @@
       <workItem from="1498184680913" duration="36607000" />
       <workItem from="1498454020616" duration="20333000" />
       <workItem from="1498703197712" duration="10383000" />
+      <workItem from="1499017882252" duration="11167000" />
+      <workItem from="1499121836162" duration="4143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147316000" />
+    <option name="totallyTimeSpent" value="162626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23426062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -636,54 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mountain/evento/todos/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="98" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mountain/evento/obtener_evento_individual.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ejconexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="2078" column="9" lean-forward="false" selection-start-line="2078" selection-start-column="9" selection-end-line="2078" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejemplo/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <marker date="1497727844322" expanded="true" signature="86:107" ph="SELECT * FRO... CLIENTE" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mountain/inscripcion/valida/valida_inscripcion_pack.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -719,10 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1497733096668" expanded="true" signature="87:108" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1497733096668" expanded="true" signature="510:531" ph="SELECT * FRO... USUARIO" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -786,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,20 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/Ejemplo3_NuSOAP/nusoap_client_ej3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Ejemplo3_NuSOAP/nusoap_server_ej3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Ejemplo3/nusoap_client_ej3.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -843,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,57 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="83" column="30" lean-forward="true" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
-          <folding>
-            <marker date="1498492508287" expanded="true" signature="141:200" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="141:233" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="141:234" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="141:235" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="141:236" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="141:243" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="141:246" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="141:247" ph="SELECT * FRO... CLIENTE" />
-            <marker date="1498492508287" expanded="true" signature="320:557" ph="SELECT E.NOM... EVENTO" />
-            <marker date="1498492508287" expanded="true" signature="320:558" ph="SELECT E.NOM... EVENTO" />
-            <marker date="1498492508287" expanded="true" signature="320:559" ph="SELECT E.NOM... EVENTO" />
-            <marker date="1498492508287" expanded="true" signature="320:567" ph="SELECT E.NOM... EVENTO" />
-            <marker date="1498492508287" expanded="true" signature="320:568" ph="SELECT E.NOM... EVENTO" />
-            <marker date="1498492508287" expanded="true" signature="633:941" ph="SELECT E.IDE... EVENTO" />
-            <marker date="1498492508287" expanded="true" signature="1019:1032" ph="SELECT * FRO... " />
-            <marker date="1498492508287" expanded="true" signature="1019:1033" ph="SELECT * FRO... ${$db}" />
-            <marker date="1498492508287" expanded="true" signature="1019:1058" ph="SELECT * FRO... USUARIO" />
-            <marker date="1498492508287" expanded="true" signature="1019:1059" ph="SELECT * FRO... USUARIO" />
-            <marker date="1498492508287" expanded="true" signature="1019:1088" ph="SELECT * FRO... USUARIO" />
-            <marker date="1498492508287" expanded="true" signature="1019:1089" ph="SELECT * FRO... USUARIO" />
-            <marker date="1498492508287" expanded="true" signature="1019:1091" ph="SELECT * FRO... USUARIO" />
-            <marker date="1498492508287" expanded="true" signature="1019:1101" ph="SELECT * FRO... USUARIO" />
-            <marker date="1498492508287" expanded="true" signature="1019:1102" ph="SELECT * FRO... USUARIO" />
-            <marker date="1498492508287" expanded="true" signature="1264:1355" ph="INSERT INTO INSCRIPCIONEVENTO... " />
-            <marker date="1498492508287" expanded="true" signature="1264:1394" ph="INSERT INTO INSCRIPCIONEVENTO... " />
-            <marker date="1498492508287" expanded="true" signature="1476:1630" ph="INSERT INTO INSCRIPCIONEVENTO... " />
-            <marker date="1498492508287" expanded="true" signature="1723:1788" ph="SELECT * FRO... INSCRIPCIONEVENTO" />
-            <marker date="1498492508287" expanded="true" signature="1723:1820" ph="SELECT * FRO... INSCRIPCIONEVENTO" />
-            <marker date="1498492508287" expanded="true" signature="1723:1821" ph="SELECT * FRO... INSCRIPCIONEVENTO" />
-            <marker date="1498492508287" expanded="true" signature="1723:1835" ph="SELECT * FRO... INSCRIPCIONEVENTO" />
-            <marker date="1498492508287" expanded="true" signature="1723:1836" ph="SELECT * FRO... INSCRIPCIONEVENTO" />
-            <marker date="1498492508287" expanded="true" signature="1917:2052" ph="SELECT * FRO... INSCRIPCIONPACK" />
-            <marker date="1498492508287" expanded="true" signature="2136:2184" ph="DELETE FROM " />
-            <marker date="1498492508287" expanded="true" signature="2136:2211" ph="DELETE FROM " />
-            <marker date="1498492508287" expanded="true" signature="2136:2212" ph="DELETE FROM " />
-            <marker date="1498492508287" expanded="true" signature="2136:2231" ph="DELETE FROM " />
-            <marker date="1498492508287" expanded="true" signature="2136:2261" ph="DELETE FROM " />
-            <marker date="1498492508287" expanded="true" signature="2136:2262" ph="DELETE FROM " />
-            <marker date="1498492508287" expanded="true" signature="2343:2462" ph="DELETE FROM " />
-            <marker date="1498492508287" expanded="true" signature="2549:2587" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2549:2588" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2549:2598" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2549:2600" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2549:2624" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2549:2632" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2549:2652" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2717:2802" ph="UPDATE INSCR... " />
-            <marker date="1498492508287" expanded="true" signature="2872:3101" ph="SELECT DISTI... EQUIPOEVENTO" />
-            <marker date="1498492508287" expanded="true" signature="2878:3101" ph="select DISTI... EQUIPOEVENTO" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,27 +859,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webcliente/proceso/class.servicios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="36" lean-forward="false" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
-          <folding>
-            <marker date="1498506419771" expanded="true" signature="540:549" ph="..." />
-            <marker date="1498506419771" expanded="true" signature="1382:1392" ph="..." />
-            <marker date="1498506419771" expanded="true" signature="1986:1995" ph="..." />
-            <marker date="1498506419771" expanded="true" signature="3184:3193" ph="..." />
-            <marker date="1498506419771" expanded="true" signature="4405:4414" ph="..." />
-            <marker date="1498506419771" expanded="true" signature="5682:5691" ph="..." />
-            <marker date="1498506419771" expanded="true" signature="6948:6957" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webcliente/js/default.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,60 +882,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mountain/evento/obtener_evento_individual.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
-          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webcliente/modal/modal-evento-individual.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webcliente/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="782">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1498793301582" expanded="false" signature="6344:6361" ph="..." />
             <marker date="1498793301582" expanded="false" signature="6852:6871" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mountain/evento/obtener_evento_individual.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Ejemplo3_NuSOAP/nusoap_server_ej3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Ejemplo3_NuSOAP/nusoap_client_ej3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/NuSOAP_EjemploFile/nusoap_client_ejFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EjemploFile/nusoap_server_ejFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webcliente/proceso/class.servicios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="239" column="0" lean-forward="false" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+          <folding>
+            <marker date="1499026610493" expanded="true" signature="540:549" ph="..." />
+            <marker date="1499026610493" expanded="true" signature="1382:1392" ph="..." />
+            <marker date="1499026610493" expanded="true" signature="1986:1995" ph="..." />
+            <marker date="1499026610493" expanded="true" signature="3184:3193" ph="..." />
+            <marker date="1499026610493" expanded="true" signature="4405:4414" ph="..." />
+            <marker date="1499026610493" expanded="true" signature="5682:5691" ph="..." />
+            <marker date="1499026610493" expanded="true" signature="6948:6957" ph="..." />
+            <marker date="1499026610493" expanded="true" signature="8214:8223" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EjemploFile/nusoap_client_ejFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="36" column="63" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="63" />
+          <folding>
+            <marker date="1499055399527" expanded="true" signature="393:403" ph="..." />
+            <marker date="1499055399527" expanded="true" signature="1121:1131" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mountain/comprobante/ingresa_comprobante.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="64" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webcliente/proceso/post.comprobante.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webcliente/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webcliente/evento.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        <state relative-caret-position="260">
+          <caret line="142" column="49" lean-forward="true" selection-start-line="142" selection-start-column="49" selection-end-line="142" selection-end-column="49" />
           <folding>
-            <marker date="1498793518535" expanded="true" signature="188:244" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="2660:4450" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="2796:3252" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="2930:3241" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3274:3395" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3309:3329" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3364:3384" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3417:3874" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3448:3553" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3584:3863" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3896:4443" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="3927:4282" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="4313:4432" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="4516:5603" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="4586:5331" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="4612:5320" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="4680:4848" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="4951:5270" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="5017:5251" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="5414:5569" ph="..." />
-            <marker date="1498793518535" expanded="true" signature="5452:5558" ph="..." />
+            <marker date="1499129185697" expanded="true" signature="188:244" ph="..." />
           </folding>
         </state>
       </provider>

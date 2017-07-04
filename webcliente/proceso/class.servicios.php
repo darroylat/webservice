@@ -219,6 +219,43 @@ var $clave = '123456';
             }
         }
     }
+    function ingresoComprobante($idevento, $idusuario, $comprobante){
+        $serverURL = 'http://localhost/webservice/mountain/comprobante/ingresa_comprobante.php';
+        $metodoALlamar = 'ingresaComprobante';
+        $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
+        $cliente->soap_defencoding = 'UTF-8';
+
+        $error = $cliente->getError();
+        if ($error) {
+            echo '<pre style="color:red">' . $error . '</pre>';
+            echo '<p style="color:red;'>htmlspecialchars($cliente->getDebug(), ENT_QUOTES).'</p>';
+            die();
+        }
+        // Datos de entrada
+        $datos = array('usuario' => $this->usuario,
+            'clave' => $this->clave,
+            'idevento' => $idevento,
+            'idusuario' => $idusuario,
+            'comprobante' => $comprobante);
+
+        $result = $cliente->call(
+            $metodoALlamar,  // Funcion a llamar
+            $datos   // Parametros pasados a la funcion
+        );
+
+        // Verificacion que los parametros estan ok, y si lo estan. mostrar rta.
+        if ($cliente->fault) {
+            return $result;
+        } else {
+            $error = $cliente->getError();
+            if ($error) {
+                return $error;
+            } else {
+                return $result;
+            }
+        }
+    }
+
 }
 
 

@@ -15,6 +15,7 @@ include 'proceso/remoteService.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/fileinput.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/fileinput.min.js"></script>
@@ -62,59 +63,132 @@ $evento = split('\|',evento($codigo));
 
 ?>
 <div class="container">
-    <h1><?=$evento[1]?> </h1><h3><?=$evento[2]?></h3>
-    <!--data-toggle="modal" data-target="#myModalEvento"-->
+    <h1><b><?=$evento[1]?></b></h1><h3><?=$evento[2]?></h3> <br>    <!--data-toggle="modal" data-target="#myModalEvento"-->
     <div class="row">
         <!--div class="col-md-3 col-md-offset-3"><b>Ingresa tu comprobante</b></div-->
-        <div class="col-md-4 col-md-offset-6">
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="col-md-6">
+                <p><img src="images/montana.jpg" width="300"></p>
+            </div>
+        </div>
+        <div class="col-md-7">
             <?php if(isset($_SESSION['usuario'] )){ ?>
                 <label>Ingresa tu comprobante</label>
-                <input type="file">
+                <input id="comprobanteFoto" name="comprobante" type="file" class="file file-loading" data-allowed-file-extensions='["jpg", "png"]' data-show-preview="false">
+
+                <script>
+                    $("#comprobanteFoto").fileinput({
+                        uploadUrl: "proceso/post.comprobante.php", // server upload action
+                        uploadAsync: false
+                    });
+                </script>
+
             <?php }else{ ?>
                 <label>Ingresa tu comprobante</label>
-                <input type="file" disabled>
+                <input type="file" class="file" disabled>
             <?php } ?>
-
         </div>
+
     </div>
     <div class="row">
-            <div class="col-md-6">
-
-            </div>
-            <div class="col-md-6">
-
-            </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label><h4><b>Descripción</b></h4></label>
             <p><?=$evento[3]?></p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label><h4><b>Datos Salida</b></h4></label>
             <p><b>Fecha: </b><?=$evento[4]?></p>
             <p><b>Hora: </b><?=$evento[5]?></p>
             <p><b>Punto de Encuentro: </b><?=$evento[7]?></p>
             <p><b>Valor: </b><?=$evento[6]?></p>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label><h4><b>Equipo Requerido</b></h4></label>
             <ul>
-            <?php
-            $equipo = split('\!',$evento[9]);
-            for($i = 1;$i < count($equipo)-1;$i++){
-                $campo = split('\#', $equipo[$i]); ?>
-                <li><?=$campo[1]?></li>
-            <?php
-            } ?>
+                <?php
+                $equipo = split('\!',$evento[9]);
+                for($i = 1;$i < count($equipo)-1;$i++){
+                    $campo = split('\#', $equipo[$i]); ?>
+                    <li><?=$campo[1]?></li>
+                    <?php
+                } ?>
             </ul>
         </div>
-        <div class="col-md-6">
-            <label><h4><b>Fotografia</b></h4></label>
-            <p><img src="images/montana.jpg"></p>
-        </div>
+
+    </div>
+    <div class="row">
+        <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+            <input type="file" name="uploadctl" multiple />
+            <ul id="fileList">
+                <!-- The file list will be shown here -->
+            </ul>
+        </form>
+        <script>
+            ('#upload').fileupload({
+
+                // This function is called when a file is added to the queue
+                add: function (e, data) {
+                //This area will contain file list and progress information.
+                var tpl = $('<li class="working">'+
+                    '<input type="text" value="0" data-width="48" data-height="48" data-fgColor="#0788a5" data-readOnly="1" data-bgColor="#3e4043" />'+
+                    '<p></p><span></span></li>' );
+
+                // Append the file name and file size
+                tpl.find('p').text(data.files[0].name)
+                    .append('<i>' + formatFileSize(data.files[0].size) + '</i>');
+
+                // Add the HTML to the UL element
+                data.context = tpl.appendTo(ul);
+
+                // Initialize the knob plugin. This part can be ignored, if you are showing progress in some other way.
+                tpl.find('input').knob();
+
+                // Listen for clicks on the cancel icon
+                tpl.find('span').click(function(){
+                    if(tpl.hasClass('working')){
+                        jqXHR.abort();
+                    }
+                    tpl.fadeOut(function(){
+                        tpl.remove();
+                    });
+                });
+
+                // Automatically upload the file once it is added to the queue
+                var jqXHR = data.submit();
+            },
+            progress: function(e, data){
+
+                // Calculate the completion percentage of the upload
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+
+                // Update the hidden input field and trigger a change
+                // so that the jQuery knob plugin knows to update the dial
+                data.context.find('input').val(progress).change();
+
+                if(progress == 100){
+                    data.context.removeClass('working');
+                }
+            }
+            });
+            //Helper function for calculation of progress
+            function formatFileSize(bytes) {
+                if (typeof bytes !== 'number') {
+                    return '';
+                }
+
+                if (bytes >= 1000000000) {
+                    return (bytes / 1000000000).toFixed(2) + ' GB';
+                }
+
+                if (bytes >= 1000000) {
+                    return (bytes / 1000000).toFixed(2) + ' MB';
+                }
+                return (bytes / 1000).toFixed(2) + ' KB';
+            }
+        </script>
     </div>
 </div>
 
