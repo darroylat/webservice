@@ -37,7 +37,13 @@ class EventoDAO {
         $queryEventos = getTodosEvento(); //agregar cantidad en la query
         $listadoEvento = ejecutar_sql($conexionCliente, $queryEventos);
 
-        $salida = '0000#';
+        $fila = mysqli_num_rows($listadoEvento);
+
+        if($fila == 0){
+            $salida = '0001#';
+        }else{
+            $salida = '0000#';
+        }
 
         while ($evento = $listadoEvento->fetch_assoc()) {
            $salida .= $this->getEvento($evento);
