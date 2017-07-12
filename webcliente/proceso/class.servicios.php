@@ -6,8 +6,16 @@ class Servicios{
 var $usuario = 'cliente';
 var $clave = '123456';
 
+var $urlValidaUsuario = 'http://webservice.lerolero.cl/mountain/usuario/valida_usuario.php';
+var $urlVerEventos = 'http://webservice.lerolero.cl/mountain/evento/obtener_evento_todos.php';
+var $urlEvento = 'http://webservice.lerolero.cl/mountain/evento/obtener_evento_individual.php';
+var $urlValidaInscripcionEvento = 'http://webservice.lerolero.cl/mountain/inscripcion/valida/valida_inscripcion_evento.php';
+var $urlEliminarInscripcionEvento = 'http://webservice.lerolero.cl/mountain/inscripcion/eliminar/eliminar_inscripcion_evento.php';
+var $urlIncripcionEvento = 'http://webservice.lerolero.cl/mountain/inscripcion/registro/registrar_inscripcion_evento.php';
+var $urlIngresoComprobante = 'http://webservice.lerolero.cl/mountain/comprobante/ingresa_comprobante.php';
+
     function valida_usuario($user, $pass){
-        $serverURL = 'http://localhost/webservice/mountain/usuario/valida_usuario.php';
+        $serverURL = $this->urlValidaUsuario;
         $metodoALlamar = 'validaUsuario';
         $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
         $cliente->soap_defencoding = 'UTF-8';
@@ -49,7 +57,7 @@ var $clave = '123456';
     }
 
     function verEventos($cantidad){
-        $serverURL = 'http://localhost/webservice/mountain/evento/obtener_evento_todos.php';
+        $serverURL = $this->urlVerEventos;
         $metodoALlamar = 'listarEventos';
         $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
         $cliente->soap_defencoding = 'UTF-8';
@@ -82,7 +90,7 @@ var $clave = '123456';
         }
     }
     function evento($id){
-        $serverURL = 'http://localhost/webservice/mountain/evento/obtener_evento_individual.php';
+        $serverURL = $this->urlEvento;
         $metodoALlamar = 'verEvento';
         $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
         $cliente->soap_defencoding = 'UTF-8';
@@ -115,7 +123,7 @@ var $clave = '123456';
         }
     }
     function validaInscripcionEvento($idevento, $idusuario){
-        $serverURL = 'http://localhost/webservice/mountain/inscripcion/valida/valida_inscripcion_evento.php';
+        $serverURL = $this->urlValidaInscripcionEvento;
         $metodoALlamar = 'validaInscripcion';
         $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
         $cliente->soap_defencoding = 'UTF-8';
@@ -150,7 +158,7 @@ var $clave = '123456';
         }
     }
     function eliminarInscripcionEvento($idevento, $idusuario){
-        $serverURL = 'http://localhost/webservice/mountain/inscripcion/eliminar/eliminar_inscripcion_evento.php';
+        $serverURL = $this->urlEliminarInscripcionEvento;
         $metodoALlamar = 'eliminarInscripcion';
         $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
         $cliente->soap_defencoding = 'UTF-8';
@@ -185,7 +193,7 @@ var $clave = '123456';
         }
     }
     function inscripcionEvento($idevento, $idusuario){
-        $serverURL = 'http://localhost/webservice/mountain/inscripcion/registro/registrar_inscripcion_evento.php';
+        $serverURL = $this->urlIncripcionEvento;
         $metodoALlamar = 'creaInscripcion';
         $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
         $cliente->soap_defencoding = 'UTF-8';
@@ -220,7 +228,7 @@ var $clave = '123456';
         }
     }
     function ingresoComprobante($idevento, $idusuario, $comprobante){
-        $serverURL = 'http://localhost/webservice/mountain/comprobante/ingresa_comprobante.php';
+        $serverURL = $this->urlIngresoComprobante;
         $metodoALlamar = 'ingresaComprobante';
         $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
         $cliente->soap_defencoding = 'UTF-8';

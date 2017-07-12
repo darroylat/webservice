@@ -49,7 +49,7 @@ include 'proceso/remoteService.php';
             <ul class="nav navbar-nav navbar-right">
                 <?php if(isset($_SESSION['usuario'] )){ ?>
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span><?=$_SESSION['usuario'];?></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    <li><a href="proceso/destruir_session.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 <?php }else{ ?>
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#myModalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -192,46 +192,7 @@ $evento = split('\|',evento($codigo));
     </div>
 </div>
 
-<!--Footer-->
-<footer class="page-footer  center-on-small-only">
 
-    <!--Footer Links-->
-    <div class="container-fluid bg-inverse">
-        <div class="row">
-
-            <!--First column-->
-            <div class="col-md-6">
-                <h5 class="title">Footer Content</h5>
-                <p>Here you can use rows and columns here to organize your footer content.</p>
-            </div>
-            <!--/.First column-->
-
-            <!--Second column-->
-            <div class="col-md-6">
-                <h5 class="title">Links</h5>
-                <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
-                </ul>
-            </div>
-            <!--/.Second column-->
-        </div>
-    </div>
-    <!--/.Footer Links-->
-
-    <!--Copyright-->
-    <div class="footer-copyright">
-        <div class="container-fluid">
-            © 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
-
-        </div>
-    </div>
-    <!--/.Copyright-->
-
-</footer>
-<!--/.Footer-->
 <script src="js/default.js"></script>
 <?php include 'modal/modal-login.html'; ?>
 <?php include 'modal/modal-evento-individual.html'; ?>

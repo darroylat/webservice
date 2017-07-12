@@ -69,8 +69,13 @@
         <?php
         $evento = split('\#',verEvento(6));
         if ($evento[0] == '0000'){
+            $contador = count($evento)-1;
             for ($i = 1;$i < count($evento)-1;$i++){
                 $campos = split('\|', $evento[$i]);
+                if ($i == 1 || $i == 4){
+                    echo '<div class="row">';
+                }
+
                 ?>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail imagenrelativa">
@@ -117,9 +122,12 @@
                 </div>
 
                 <?php
+                if ($i == 3 || $i == 6){
+                    echo '</div>';
+                }
             }
         }else{
-            echo '<h2>No existen Eventos</h2>';
+            echo '<h2>No existen salidas de trekking</h2>';
         }
         ?>
         <!--div class="col-sm-6 col-md-4">
@@ -149,48 +157,20 @@
 
 </div>
 
-<!--Footer-->
-<footer class="page-footer  center-on-small-only">
 
-    <!--Footer Links-->
-    <div class="container-fluid bg-inverse">
-        <div class="row">
-
-            <!--First column-->
-            <div class="col-md-6">
-                <h5 class="title">Footer Content</h5>
-                <p>Here you can use rows and columns here to organize your footer content.</p>
-            </div>
-            <!--/.First column-->
-
-            <!--Second column-->
-            <div class="col-md-6">
-                <h5 class="title">Links</h5>
-                <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
-                </ul>
-            </div>
-            <!--/.Second column-->
-        </div>
-    </div>
-    <!--/.Footer Links-->
-
-    <!--Copyright-->
-    <div class="footer-copyright">
-        <div class="container-fluid">
-            © 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
-
-        </div>
-    </div>
-    <!--/.Copyright-->
-
-</footer>
-<!--/.Footer-->
 <script src="js/default.js"></script>
+<script src="js/jquery.rut.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $('#usuario').rut({formatOn: 'keyup'});
+    });
+
+
+</script>
+
 <?php include 'modal/modal-login.html'; ?>
 <?php include 'modal/modal-evento-individual.html'; ?>
+<?php include 'modal/modal-mensaje.html'; ?>
 </body>
 </html>
