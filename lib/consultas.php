@@ -24,9 +24,10 @@ function getTodosEvento(){
                 E.DESCRIPCION, E.FECHA, E.HORA,  E.VALOR, E.PUNTO, E.FOTO, E.ESTADO FROM EVENTO E
                 JOIN SENDERO S ON E.IDSENDERO = S.IDSENDERO
                 JOIN UBICACION U ON U.IDUBICACION = S.IDUBICACION
-                WHERE DATE(E.FECHAREGISTRO) > CURDATE() - INTERVAL 1 DAY";
+                WHERE E.ESTADO = 0 LIMIT  6";
     return $query;
 }
+//DATE(E.FECHAREGISTRO) > CURDATE() - INTERVAL 1 DAY
 
 function getUsuario($usuario, $clave){
     $query = "SELECT * FROM USUARIO WHERE IDUSUARIO = '".$usuario."' AND PASSWORD = '".$clave."'";
