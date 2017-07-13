@@ -13,6 +13,7 @@ var $urlValidaInscripcionEvento = 'http://webservice.lerolero.cl/mountain/inscri
 var $urlEliminarInscripcionEvento = 'http://webservice.lerolero.cl/mountain/inscripcion/eliminar/eliminar_inscripcion_evento.php';
 var $urlIncripcionEvento = 'http://webservice.lerolero.cl/mountain/inscripcion/registro/registrar_inscripcion_evento.php';
 var $urlIngresoComprobante = 'http://webservice.lerolero.cl/mountain/comprobante/ingresa_comprobante.php';
+var $urlRegistroUsuario = 'http://webservice.lerolero.cl/mountain/usuario/registrar_usuario.php';
 
     function valida_usuario($user, $pass){
         $serverURL = $this->urlValidaUsuario;
@@ -264,6 +265,44 @@ var $urlIngresoComprobante = 'http://webservice.lerolero.cl/mountain/comprobante
         }
     }
 
+    function registrarUsuario($usuario, $clave, $nombre, $apellido, $email, $telefono, $edad, $sexo){
+        $serverURL = $this->urlRegistroUsuario;
+        $metodoALlamar = 'registraUsuario';
+        $cliente = new nusoap_client($serverURL.'?wsdl', 'wsdl');
+        $cliente->soap_defencoding = 'UTF-8';
+
+
+        $datos = array(
+            'usuario' => $this->usuario,
+            'clave' => $this->clave,
+            'rut' => $usuario,
+            'pass' => $clave,
+            'nombre' => $nombre,
+            'apellido' => $apellido,
+            'email' => $email,
+            'telefono' => $telefono,
+            'edad' => $edad,
+            'sexo' => $sexo
+        );
+
+        $result = $cliente->call(
+            $metodoALlamar,  // Funcion a llamar
+            $datos   // Parametros pasados a la funcion
+        );
+
+        // Verificacion que los parametros estan ok, y si lo estan. mostrar rta.
+        if ($cliente->fault) {
+            return $result;
+        } else {
+            $error = $cliente->getError();
+            if ($error) {
+                return $error;
+            } else {
+                return $result;
+            }
+        }
+
+    }
 }
 
 

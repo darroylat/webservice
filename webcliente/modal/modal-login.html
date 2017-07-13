@@ -1,6 +1,6 @@
 
 <div id="myModalLogin" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
-    <form action="proceso/post.validaUsuario.php" method="post">
+    <!--<form action="proceso/post.validaUsuario.php" method="post">-->
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -13,7 +13,7 @@
                         <div class="col-md-10">
                             <div class="form-group">
                                 <label>Usuario:</label>
-                                <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="sizing-addon2" placeholder="14.569.484-1">
+                                <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="sizing-addon2" placeholder="14.569.484-1" onkeypress="doValSoloNumerosKeyPress()">
                             </div>
                         </div>
                         <div class="col-md-1"></div>
@@ -31,9 +31,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" onclick="cerrarlogin()" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                    <button type="submit" onclick="javascript:validaLogin()" class="btn btn-primary">Aceptar</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
-    </form>
+    <!--</form>-->
 </div><!-- /.modal -->

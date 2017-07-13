@@ -51,7 +51,7 @@ include 'proceso/remoteService.php';
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span><?=$_SESSION['usuario'];?></a></li>
                     <li><a href="proceso/destruir_session.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 <?php }else{ ?>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModalRegistro"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#myModalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 <?php } ?>
             </ul>
@@ -196,5 +196,8 @@ $evento = split('\|',evento($codigo));
 <script src="js/default.js"></script>
 <?php include 'modal/modal-login.html'; ?>
 <?php include 'modal/modal-evento-individual.html'; ?>
+
+<?php include 'modal/modal-registro.html'; ?>
+<?php include 'modal/modal-mensaje.html'; ?>
 </body>
 </html>

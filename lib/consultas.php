@@ -34,8 +34,9 @@ function getUsuario($usuario, $clave){
     return $query;
 }
 
-function putUsuario($usuario){
-    $query = "";
+function putUsuario($rut, $pass, $nombre, $apellido, $email, $telefono, $edad, $sexo){
+    $query = "INSERT INTO USUARIO (IDUSUARIO, PASSWORD, NOMBRE, APELLIDO, EMAIL, TELEFONO, EDAD, SEXO)
+      VALUES ('".$rut."','".$pass."','".$nombre."','".$apellido."','".$email."','".$telefono."','".$edad."','".$sexo."')";
     return $query;
 }
 
