@@ -1,7 +1,7 @@
 <?php
 
 require_once('../../nusoap/lib/nusoap.php');
-require_once('../../lib/soporte_obrea.php');
+
 include('../../lib/conexion.php');
 include('../../lib/consultas.php');
 $miURL = 'urn:Evento';
